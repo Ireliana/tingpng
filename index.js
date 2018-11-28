@@ -2,20 +2,25 @@ const path = require("path");
 const fs = require("fs");
 
 var tinify = require("tinify");
-tinify.key = "";
+tinify.key = "XxpVMFwq2QDyS0MQ8WbCrXHW67sJgZG3";
 let totalCount = 500;
 
-tinify.validate().then(() => {
-	let restCount = totalCount - tinify.compressionCount;
-	if (restCount <= 0) {
-		console.log("当前Key压缩次数已用完，请更换Key！");
-		return;
-	}
-	console.log(`当前Key剩余次数为${totalCount - tinify.compressionCount}次`);
-	mapDirName("./assets");
-}).catch((error) => {
-	console.log("Key认证失败！");
-});
+tinify
+	.validate()
+	.then(() => {
+		let restCount = totalCount - tinify.compressionCount;
+		if (restCount <= 0) {
+			console.log("当前Key压缩次数已用完，请更换Key！");
+			return;
+		}
+		console.log(
+			`当前Key剩余次数为${totalCount - tinify.compressionCount}次`
+		);
+		mapDirName("./img");
+	})
+	.catch(error => {
+		console.log("Key认证失败！");
+	});
 
 function mapDirName(dirName) {
 	const imgFiles = fs.readdirSync(path.resolve(__dirname, dirName));
@@ -35,11 +40,11 @@ function mapDirName(dirName) {
 }
 
 function compressImg(img) {
-	let source = tinify.fromFile(img);
 	let reg = /.*\/(.*)\.png$/;
 	let result = null;
 	if ((result = reg.exec(img))) {
 		// let rename = img.replace(result[1], "__" + result[1]);
+		let source = tinify.fromFile(img);
 		return source.toFile(img).catch(err => {
 			if (err instanceof tinify.AccountError) {
 				console.log("当前Key的剩余次数可能不足：" + err.message);
