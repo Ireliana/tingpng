@@ -2,8 +2,11 @@ const path = require("path");
 const fs = require("fs");
 
 var tinify = require("tinify");
+
 // 填写 tingpng官网注册的 key
 tinify.key = "";
+
+//默认每月可压缩图片数为500
 let totalCount = 500;
 
 tinify
@@ -20,7 +23,7 @@ tinify
 		mapDirName("./img");
 	})
 	.catch(error => {
-		console.log("Key认证失败！");
+		console.log("Key认证失败，请重新检查填写！");
 	});
 
 function mapDirName(dirName) {
