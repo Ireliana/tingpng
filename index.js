@@ -2,7 +2,8 @@ const path = require("path");
 const fs = require("fs");
 
 var tinify = require("tinify");
-tinify.key = "XxpVMFwq2QDyS0MQ8WbCrXHW67sJgZG3";
+// 填写 tingpng官网注册的 key
+tinify.key = "";
 let totalCount = 500;
 
 tinify
