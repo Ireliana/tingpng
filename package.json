@@ -20,5 +20,8 @@
   "homepage": "https://github.com/kuangMc/tingpng#readme",
   "dependencies": {
     "tinify": "^1.6.0-beta.2"
+  },
+  "devDependencies": {
+    "ora": "^4.0.3"
   }
 }
