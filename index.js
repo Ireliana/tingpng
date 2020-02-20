@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const tinify = require("tinify");
 const Ora = require("ora");
+const process = require("process");
 
 // 填写 tinypng官网注册的 key
 tinify.key = "";
@@ -22,7 +23,10 @@ tinify
 		const imgArray = [];
 
 		// 图片所在目录,默认为img
-		const imgdir = "./img";
+		// 可在命令行传入文件夹路径
+		const defaultDir = "./img";
+		const i = process.argv.indexOf("--path");
+		const imgdir = ~i ? process.argv[i + 1] : defaultDir;
 
 		// 当前压缩进度
 		let step = 0;
