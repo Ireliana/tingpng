@@ -1,8 +1,12 @@
 {
-  "name": "tingpng",
-  "version": "1.0.0",
-  "description": "图片压缩工具",
+  "name": "tinypng-node-tool",
+  "version": "1.0.1",
+  "description": "基于tinypng的node图片压缩工具",
   "main": "index.js",
+  "keywords": [
+    "node",
+    "tinypng"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
