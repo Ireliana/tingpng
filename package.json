@@ -1,31 +1,31 @@
 {
-  "name": "tinypng-node-tool",
-  "version": "1.0.1",
-  "description": "基于tinypng的node图片压缩工具",
-  "main": "index.js",
-  "keywords": [
-    "node",
-    "tinypng"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "npm run start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kuangMc/tingpng.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kuangMc/tingpng/issues"
-  },
-  "homepage": "https://github.com/kuangMc/tingpng#readme",
-  "dependencies": {
-    "tinify": "^1.6.0-beta.2"
-  },
-  "devDependencies": {
-    "ora": "^4.0.3"
-  }
+	"name": "tinypng-node-tool",
+	"version": "1.0.1",
+	"description": "基于tinypng的node图片压缩工具",
+	"main": "index.js",
+	"keywords": [
+		"node",
+		"tinypng"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js",
+		"dev": "npm run start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kuangMc/tingpng.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/kuangMc/tingpng/issues"
+	},
+	"homepage": "https://github.com/kuangMc/tingpng#readme",
+	"dependencies": {
+		"tinify": "^1.6.0-beta.2"
+	},
+	"devDependencies": {
+		"ora": "^4.0.3"
+	}
 }
